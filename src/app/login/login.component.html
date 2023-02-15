@@ -1,0 +1,87 @@
+
+<div class="container-fluid">
+ 
+  <div class="card">
+   
+    <h2>Reactive-forms</h2>
+    
+    <div class="form">
+      <form [formGroup]="reactiveForm" (ngSubmit)="reactiveuser()">
+         <!-- Username -->
+        <div>
+          <label for="username" class="form-label">Username</label>
+          <input type="text" formControlName="userName" placeholder="username" class="form-control" />
+               
+          <span
+            class="text-danger"
+            *ngIf="userName.errors?.['required'] && (userName.dirty || userName.touched)"
+            >this field is not valid</span
+          >
+          <span
+            class="text-danger"
+            *ngIf="userName.errors?.['minlength'] && (userName.dirty || userName.touched)"
+            >userName must be atleast 4 characters</span
+          >
+        </div>
+        <!-- password -->
+        <div>
+          <label for="username" class="form-label">Password</label>
+          <input type="text" formControlName="password" placeholder="Password" class="form-control" />
+    
+          <span
+            class="text-danger"
+            *ngIf="password.errors?.['required'] && (password.dirty || password.touched)"
+            >this field is not valid</span
+          >
+          <span
+          class="text-danger"
+          *ngIf="password.errors?.['minlength'] && (password.dirty || password.touched)"
+          >passwords is required</span
+        >
+       
+        
+        </div>
+       
+        <!-- email -->
+        <div>
+          <label for="email" class="form-label">E-mail</label>
+          <input type="text" formControlName="email" placeholder="E-mail" class="form-control" />
+    
+          <span
+            class="text-danger"
+            *ngIf="email.errors?.['required'] && (email.dirty || email.touched)"
+            >this field is not valid</span
+          >
+          <span
+          class="text-danger"
+          *ngIf="email.errors?.['pattern'] && (email.dirty || email.touched)"
+          >Email address is invalid</span
+        >
+         
+        </div>
+     
+    <!-- mobilenumber -->
+        <div>
+          <label for="mobilenumber" class="form-label">Mobile number</label>
+          <input type="text" formControlName="mobilenumber" placeholder="mobilenumber" class="form-control" />
+    
+          <span
+            class="text-danger"
+            *ngIf="mobilenumber.errors?.['required'] && (mobilenumber.dirty || mobilenumber.touched)"
+            >this field is not valid</span
+          >
+          <span
+          class="text-danger"
+          *ngIf="mobilenumber.errors?.['minlength'] && (mobilenumber.dirty || mobilenumber.touched)"
+          >mobile number must be at least 10 numbers
+        </span
+        >
+        </div>
+        
+        <div class="mt-4 text-center">
+        <button class="btn btn-primary " type="submit">Register</button>
+        </div>
+      </form>
+    </div>
+    </div>
+  </div>

@@ -1,0 +1,18 @@
+.container-fluid{
+    padding: 5%;
+    background-image: url("https://cdn.wallpaperhub.app/cloudcache/8/1/c/3/0/c/81c30c9eebfcefd07d2a717051cf990f9e69b62a.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+h2{
+    text-align: center;
+}
+.card {
+    width: 50%;
+    padding: 20px;
+    margin-left: 300px;
+  border-radius: 10px;
+
+}
+  
